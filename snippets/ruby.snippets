@@ -44,6 +44,8 @@ snippet deft
 	def test_${1:case_name}
 		${2}
 	end
+snippet ifl
+	${1} if ${2:condition}
 snippet if
 	if ${1:condition}
 		${2}
@@ -922,3 +924,5 @@ snippet aft
 	after :${1:each} do
 		${2}
 	end
+snippet gempath
+	gem '${1:gem}', :path => '${2:path}'
