@@ -17,4 +17,5 @@ snippet =rpl
 	= render :partial => '${1:partial}', :locals => {}
 snippet =rpc
 	= render :partial => '${1:partial}', :collection => @$1
-
+snippet linktot
+	= link_to t("${1:i18n}"), ${2}_path
