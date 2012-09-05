@@ -1,11 +1,9 @@
-snippet t
-	%table
-		%tr
-			%th
-				${1:headers}
-		%tr
-			%td
-				${2:headers}
+snippet each
+	- ${1}.each do |${2}|
+		${3}
+snippet eachli
+	- ${1}.each do |${2}|
+		%li= ${3}
 snippet ul
 	%ul
 		%li
