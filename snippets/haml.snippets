@@ -3,9 +3,18 @@ snippet pry
 snippet each
 	- ${1}.each do |${2}|
 		${3}
-snippet eachli
-	- ${1}.each do |${2}|
-		%li= ${3}
+snippet uel
+	%ul.${1:css_class}
+		- ${2:resources} do |${3:resource}|
+			%li= ${4:resource.value}
+snippet uell
+	%ul.${1:css_class}
+		- ${2:resources} do |${3:resource}|
+			%li= link_to ${4:title}, ${5:path}_path
+snippet uec
+	%ul.${1:css_class}
+		- ${2:resources} do |${3:resource}|
+			= content_tag_for(:li, ${4:value})
 snippet ul
 	%ul
 		%li
