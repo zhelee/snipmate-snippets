@@ -551,6 +551,14 @@ snippet debug
 	require 'ruby-debug'; debugger; true;
 snippet pry
 	binding.pry
+snippet gdev
+	group :development do
+		gem '${1}'
+	end
+snippet gpro
+	group :production do
+		gem '${1}'
+	end
 #############################################
 # Rails snippets - for pure Ruby, see above #
 #############################################
