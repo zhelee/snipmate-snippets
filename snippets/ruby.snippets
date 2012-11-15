@@ -40,10 +40,6 @@ snippet def
 	def ${1:method_name}
 		${2}
 	end
-snippet deft
-	def test_${1:case_name}
-		${2}
-	end
 snippet defself
 	def self.${1:class_method}
 		${2}
@@ -547,8 +543,6 @@ snippet begin
 	end
 
 #debugging
-snippet debug
-	require 'ruby-debug'; debugger; true;
 snippet pry
 	binding.pry
 snippet gdev
@@ -559,33 +553,13 @@ snippet gpro
 	group :production do
 		gem '${1}'
 	end
+snippet gtest
+	group :test do
+		gem '${1}'
+	end
 #############################################
 # Rails snippets - for pure Ruby, see above #
 #############################################
-snippet art
-	assert_redirected_to ${1::action => "${2:index}"}
-snippet artnp
-	assert_redirected_to ${1:parent}_${2:child}_path(${3:@$1}, ${4:@$2})
-snippet artnpp
-	assert_redirected_to ${1:parent}_${2:child}_path(${3:@$1})
-snippet artp
-	assert_redirected_to ${1:model}_path(${2:@$1})
-snippet artpp
-	assert_redirected_to ${1:model}s_path
-snippet asd
-	assert_difference "${1:Model}.${2:count}", $1 do
-		${3}
-	end
-snippet asnd
-	assert_no_difference "${1:Model}.${2:count}" do
-		${3}
-	end
-snippet asre
-	assert_response :${1:success}, @response.body${2}
-snippet asrj
-	assert_rjs :${1:replace}, "${2:dom id}"
-snippet ass
-	assert_select '${1:path}', :${2:text} => '${3:inner_html' ${4:do}
 snippet bf
 	before_filter :${1:method}
 snippet bt
